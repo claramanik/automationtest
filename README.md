@@ -1,6 +1,6 @@
 # automationtest
 
-encouraged to use cypress@10.6.0 to a smooth run
+encouraged to use cypress@10.6.0 for a smooth run
 
 run `npm install cypress@10.6.0` for the first installation
 
