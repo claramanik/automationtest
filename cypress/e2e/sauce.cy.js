@@ -1,16 +1,6 @@
 /// <reference types="cypress" />
 
-import mainAction from "../../SauceFunctions/mainAction";
-
-// beforeEach(() => {
-//   // Preserve cookie in every test
-//   Cypress.Cookies.defaults({
-//     preserve: (cookie) => {
-//       return true;
-//     },
-//   });
-//   cy.viewport(1280, 800);
-// });
+import mainAction from "../../SauceFunctions/mainAction.js";
 
 const action = new mainAction();
 describe(" Verify the login page", () => {
@@ -45,10 +35,12 @@ describe(" Adding and remove verification", () => {
     cy.get("#add-to-cart-sauce-labs-bike-light").should("be.visible");
     cy.get("#add-to-cart-sauce-labs-bike-light").click({ force: true });
     cy.wait(1000);
+    cy.log(" a product successfully added to the cart");
     cy.screenshot("adding a product to cart");
     cy.get("#remove-sauce-labs-bike-light").should("be.visible");
     cy.get("#remove-sauce-labs-bike-light").click({ force: true });
     cy.wait(1000);
+    cy.log(" a product successfully remove from the cart");
     cy.screenshot("remove a product from the cart");
   });
 });
